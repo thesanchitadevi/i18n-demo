@@ -16,7 +16,7 @@ i18n
     debug: true,
     fallbackLng: 'en',
     // supportedLngs: ["en", "es"], // *** added this ***
-    ns: ['translations'],
+    // ns: ['translations'],
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
@@ -40,13 +40,13 @@ i18n
       // }
     resources: {
       en: {
-        translations: {
+        translation: {
           learn: "Hello World!"
         }
       },
-      de: {
-        translations: {
-          learn: "Hola"
+      bn: {
+        translation: {
+          learn: "হ্যালো বিশ্ব"
         }
       },
     }

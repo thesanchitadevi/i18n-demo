@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const lngs = {
   en: { nativeName: "English" },
-  de: { nativeName: "Dutch" },
+  bn: { nativeName: "Bangla" },
 };
 
 function App(){
