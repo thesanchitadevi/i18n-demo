@@ -37,6 +37,7 @@ function App(){
         </div>
         <h3>{t("learn")}</h3>
         {/* <span>Browser language: {lngs}</span> */}
+        <p>{t('new.key', 'translation will be added soon')}</p>
       </div>
     </>
   );
