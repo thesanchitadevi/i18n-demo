@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { useTranslation } from "react-i18next";
 
-function App() {
+const lngs = {
+  en: { nativeName: "English" },
+  de: { nativeName: "Dutch" },
+};
+
+function App(){
+  const { t, i18n } = useTranslation();
+
+  
+  // useEffect(() => {
+  //   const lng = navigator.language;
+  //   i18n.changeLanguage(lng);
+  // }, []);
+
+  // const lng = navigator.language;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <h1>Language</h1>
+        <div>
+          {Object.keys(lngs).map((lng:any) => (
+            <button
+              type="submit"
+              key={lng}
+              onClick={() => i18n.changeLanguage(lng)}
+              disabled={i18n.resolvedLanguage === lng}
+            >
+              {lng}
+             
+            </button>
+          ))}
+        </div>
+        <h3>{t("learn")}</h3>
+        {/* <span>Browser language: {lngs}</span> */}
+      </div>
+    </>
   );
 }
 

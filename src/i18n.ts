@@ -15,7 +15,7 @@ i18n
   .init({
     debug: true,
     fallbackLng: 'en',
-    supportedLngs: ["en", "es"], // *** added this ***
+    // supportedLngs: ["en", "es"], // *** added this ***
     ns: ['translations'],
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
@@ -23,21 +23,32 @@ i18n
     // backend: {
     //     loadPath: `http://localhost:4000/locales/{{lng}}/{{ns}}.json`,
     // },
-    resources: {
-      en: {
-        translation: {
-        //   greeting: {
-        //       hello: "Hello World!"
-        //   }
-        }
-      },
-    //   es: {
-    //     translation: {
+    // resources: {
+    //   en: {
+    //     translations: {
     //       greeting: {
-    //           hello: "Hola Papi!"
+    //           hello: "Hello World!"
     //       }
     //     }
-    //   }
+    //   },
+      // es: {
+      //   translations: {
+      //     greeting: {
+      //         hello: "Hola Papi!"
+      //     }
+      //   }
+      // }
+    resources: {
+      en: {
+        translations: {
+          learn: "Hello World!"
+        }
+      },
+      de: {
+        translations: {
+          learn: "Hola"
+        }
+      },
     }
   });
 
