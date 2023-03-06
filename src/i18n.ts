@@ -1,7 +1,8 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import Backend from "i18next-http-backend"; // *** added this ***
+// import Backend from "i18next-http-backend"; // *** added this ***
+import Backend from "i18next-locize-backend"; // *** added this ***
 
 i18n
   .use(Backend) // *** added this ***
@@ -23,6 +24,10 @@ i18n
     saveMissing: true,
     // backend: {
     //     loadPath: `http://localhost:4000/locales/{{lng}}/{{ns}}.json`,
+    backend: {
+      projectId: '333b40b1-ea97-4250-9598-a9a160e24611',
+      apiKey: 'aad29f38-e1ad-4a07-8668-6b423d67dfbe'
+    }
     // },
     // resources: {
     //   en: {
